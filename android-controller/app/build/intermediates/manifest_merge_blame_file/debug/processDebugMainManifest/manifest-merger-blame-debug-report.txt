@@ -1,0 +1,48 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.remotecontroller"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+7-->INJECTED
+8        android:minSdkVersion="23"
+8-->INJECTED
+9        android:targetSdkVersion="37" />
+9-->INJECTED
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/storage/emulated/0/Download/RemoteViewing/android-controller/app/src/main/AndroidManifest.xml:2:70-131
+11-->/storage/emulated/0/Download/RemoteViewing/android-controller/app/src/main/AndroidManifest.xml:2:87-129
+12
+13    <application
+13-->/storage/emulated/0/Download/RemoteViewing/android-controller/app/src/main/AndroidManifest.xml:2:131-503
+14        android:allowBackup="false"
+14-->/storage/emulated/0/Download/RemoteViewing/android-controller/app/src/main/AndroidManifest.xml:2:246-273
+15        android:debuggable="true"
+16        android:extractNativeLibs="false"
+16-->INJECTED
+17        android:label="@string/app_name"
+17-->/storage/emulated/0/Download/RemoteViewing/android-controller/app/src/main/AndroidManifest.xml:2:213-245
+18        android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar" >
+18-->/storage/emulated/0/Download/RemoteViewing/android-controller/app/src/main/AndroidManifest.xml:2:144-212
+19        <activity
+19-->/storage/emulated/0/Download/RemoteViewing/android-controller/app/src/main/AndroidManifest.xml:2:274-489
+20            android:name="com.example.remotecontroller.MainActivity"
+20-->/storage/emulated/0/Download/RemoteViewing/android-controller/app/src/main/AndroidManifest.xml:2:284-312
+21            android:exported="true" >
+21-->/storage/emulated/0/Download/RemoteViewing/android-controller/app/src/main/AndroidManifest.xml:2:313-336
+22            <intent-filter>
+22-->/storage/emulated/0/Download/RemoteViewing/android-controller/app/src/main/AndroidManifest.xml:2:337-478
+23                <action android:name="android.intent.action.MAIN" />
+23-->/storage/emulated/0/Download/RemoteViewing/android-controller/app/src/main/AndroidManifest.xml:2:352-403
+23-->/storage/emulated/0/Download/RemoteViewing/android-controller/app/src/main/AndroidManifest.xml:2:360-401
+24
+25                <category android:name="android.intent.category.LAUNCHER" />
+25-->/storage/emulated/0/Download/RemoteViewing/android-controller/app/src/main/AndroidManifest.xml:2:403-462
+25-->/storage/emulated/0/Download/RemoteViewing/android-controller/app/src/main/AndroidManifest.xml:2:413-460
+26            </intent-filter>
+27        </activity>
+28    </application>
+29
+30</manifest>

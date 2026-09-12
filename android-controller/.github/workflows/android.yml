@@ -1,0 +1,53 @@
+name: Build Android APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v6
+        with:
+          gradle-version: '9.6'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install Android SDK packages
+        run: |
+          sdkmanager "platform-tools" \
+            "platforms;android-35" \
+            "build-tools;36.0.0"
+
+      - name: Build Controller
+        run: gradle -p android-controller assembleDebug --no-daemon
+
+      - name: Build Target
+        run: gradle -p android-target assembleDebug --no-daemon
+
+      - name: Upload Controller APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: RemoteViewing-Controller
+          path: android-controller/app/build/outputs/apk/debug/app-debug.apk
+
+      - name: Upload Target APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: RemoteViewing-Target
+          path: android-target/app/build/outputs/apk/debug/app-debug.apk
