@@ -10,7 +10,7 @@
 
     <LinearLayout android:orientation="horizontal" android:layout_marginTop="18dp" android:layout_width="match_parent" android:layout_height="wrap_content">
         <EditText android:id="@+id/code" android:hint="Device ID 6 digit" android:inputType="number" android:maxLength="6"
-            android:textColor="#FFFFFF" android:hintTextColor="#8F949E" android:backgroundTint="#6E7CF7"
+            android:textColor="#FFFFFF" android:textColorHint="#8F949E" android:backgroundTint="#6E7CF7"
             android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" />
         <Button android:id="@+id/connect" android:text="Request" android:layout_marginStart="8dp"
             android:layout_width="wrap_content" android:layout_height="wrap_content" />
