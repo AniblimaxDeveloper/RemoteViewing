@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Remote Target</string>
-    <string name="accessibility_service_description">Remote Support gestures setelah pengguna memberi izin.</string>
+    <string name="app_name">Emotexware Target</string>
+    <string name="accessibility_service_description">Mengizinkan gesture remote support setelah pengguna memberikan persetujuan.</string>
 </resources>
