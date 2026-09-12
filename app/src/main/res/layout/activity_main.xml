@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView android:id="@+id/homeScroll" android:fillViewport="true"
+        android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:padding="20dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+
+            <TextView android:text="EMOTEXWARE" android:textColor="@color/text_primary"
+                android:textSize="28sp" android:textStyle="bold"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:text="v1.0.1 • Remote Support" android:textColor="@color/text_secondary"
+                android:textSize="14sp" android:layout_marginTop="4dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+            <TextView android:text="Mode" android:textColor="@color/text_secondary" android:textSize="13sp"
+                android:layout_marginTop="24dp" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                <Button android:id="@+id/modeController" android:text="Controller" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" />
+                <Button android:id="@+id/modeTarget" android:text="This Device" android:layout_weight="1" android:layout_marginStart="8dp" android:layout_width="0dp" android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/controllerPanel" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:text="Find target device" android:textColor="@color/text_primary" android:textSize="19sp" android:textStyle="bold" android:layout_marginTop="24dp" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/modelInput" android:hint="Model, e.g. OPPO CPH2477" android:textColor="@color/text_primary" android:textColorHint="@color/text_secondary" android:singleLine="true" android:inputType="text" android:backgroundTint="@color/accent" android:layout_marginTop="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <Button android:id="@+id/connect" android:text="CONNECT" android:layout_marginTop="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <TextView android:id="@+id/controllerStatus" android:text="Disconnected" android:textColor="@color/text_secondary" android:layout_marginTop="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <ImageView android:id="@+id/screen" android:background="#050608" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_marginTop="10dp" android:layout_width="match_parent" android:layout_height="420dp" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                    <Button android:id="@+id/back" android:text="BACK" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" />
+                    <Button android:id="@+id/home" android:text="HOME" android:layout_weight="1" android:layout_marginStart="6dp" android:layout_width="0dp" android:layout_height="wrap_content" />
+                    <Button android:id="@+id/recents" android:text="RECENT" android:layout_weight="1" android:layout_marginStart="6dp" android:layout_width="0dp" android:layout_height="wrap_content" />
+                    <Button android:id="@+id/disconnect" android:text="STOP" android:layout_weight="1" android:layout_marginStart="6dp" android:layout_width="0dp" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/targetPanel" android:orientation="vertical" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:text="This device" android:textColor="@color/text_primary" android:textSize="19sp" android:textStyle="bold" android:layout_marginTop="24dp" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:id="@+id/modelView" android:textColor="@color/text_primary" android:textSize="24sp" android:textStyle="bold" android:layout_marginTop="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <TextView android:id="@+id/targetStatus" android:text="Connecting..." android:textColor="@color/text_secondary" android:layout_marginTop="6dp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <Button android:id="@+id/accessibility" android:text="ENABLE REMOTE CONTROL" android:layout_marginTop="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <Button android:id="@+id/share" android:text="START SCREEN SHARING" android:layout_marginTop="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <Button android:id="@+id/stop" android:text="STOP SESSION" android:layout_marginTop="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
